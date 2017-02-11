@@ -5,6 +5,8 @@
  */
 package activitat1u3;
 
+import java.io.IOException;
+
 /**
  *
  * @author Eric
@@ -14,8 +16,12 @@ public class Activitat1u3 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws IOException {
+        Caracters c = new Caracters();
+        c.copiarFichero(c.file1, c.file2);
+        c.copiarFicheroComprimit(c.file1, c.file2);
+        c.cercarText("Hola Jorge", c.file1);
+        c.descarregarUrl("http://www.google.es", c.file1);
     }
-    
+
 }
